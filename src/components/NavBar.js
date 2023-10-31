@@ -19,7 +19,11 @@ function NavBar() {
           <Toolbar>
             <Typography
               variant="h6"
-              sx={{ fontWeight: 600, marginRight: "1.5rem" }}
+              sx={{
+                fontWeight: 600,
+                marginRight: "1.5rem",
+                display: { xs: "none", sm: "none" },
+              }}
             >
               Hello!
             </Typography>
