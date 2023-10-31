@@ -4,7 +4,12 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-const pages = ["About", "Skills", "Projects"];
+const pages = [
+  { name: "Home", link: "/" },
+  { name: "About", link: "/about" },
+  { name: "Skills", link: "/skills" },
+  { name: "Projects", link: "/projects" },
+];
 
 function NavBar() {
   return (
@@ -20,10 +25,11 @@ function NavBar() {
             </Typography>
             {pages.map((page) => (
               <Button
-                key={page}
+                href={page.link}
+                key={page.name}
                 sx={{ my: 2, mx: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Toolbar>
